@@ -1,0 +1,29 @@
+{
+  "expo": {
+    "name": "PPS-relevamiento-visual",
+    "slug": "PPS-relevamiento-visual",
+    "version": "1.0.0",
+    "orientation": "default",
+    "icon": "./assets/images/icon.png",
+    "splash": {
+      "backgroundColor": "#F4900C"
+    },
+    "updates": {
+      "fallbackToCacheTimeout": 0
+    },
+    "assetBundlePatterns": ["**/*"],
+    "ios": {
+      "supportsTablet": true
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/images/adaptive-icon.png",
+        "backgroundColor": "#F4900C"
+      },
+      "package": "com.ytrodi.PPSApp2"
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    }
+  }
+}
