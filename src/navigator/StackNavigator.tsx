@@ -3,13 +3,11 @@ import { useToast } from 'react-native-toast-notifications';
 import { useAuth } from '../context/AuthProvider';
 import { useAsync } from '../hooks';
 import { Button, FullPageSpinner } from '../components';
-import { Home, Good, Bad } from '../screens';
+import { Home } from '../screens';
 import { mapAuthError, sleep } from '../helpers';
 
 export type RootStackParams = {
   Home: undefined;
-  Good: undefined;
-  Bad: undefined;
 };
 
 const Stack = createStackNavigator<RootStackParams>();
@@ -43,12 +41,6 @@ function StackNavigator() {
           ),
         }}
       />
-      <Stack.Screen
-        name='Good'
-        component={Good}
-        options={{ title: 'Cosas lindas del edificio' }}
-      />
-      <Stack.Screen name='Bad' component={Bad} />
     </Stack.Navigator>
   );
 }

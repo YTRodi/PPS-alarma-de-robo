@@ -1,5 +1,5 @@
 {
-  "name": "pps-relevamiento-visual",
+  "name": "pps-alarma-de-robo",
   "version": "1.0.0",
   "main": "node_modules/expo/AppEntry.js",
   "scripts": {
@@ -24,8 +24,11 @@
     "expo": "~44.0.0",
     "expo-app-loading": "~1.3.0",
     "expo-asset": "~8.4.6",
+    "expo-av": "~10.2.0",
+    "expo-camera": "~12.1.2",
     "expo-constants": "~13.0.1",
     "expo-font": "~10.0.4",
+    "expo-sensors": "~11.1.0",
     "expo-splash-screen": "~0.14.1",
     "expo-status-bar": "~1.2.0",
     "firebase": "^9.6.10",

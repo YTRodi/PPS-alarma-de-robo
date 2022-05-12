@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "PPS-relevamiento-visual",
-    "slug": "PPS-relevamiento-visual",
+    "name": "PPS-alarma-de-robo",
+    "slug": "PPS-alarma-de-robo",
     "version": "1.0.0",
     "orientation": "default",
     "icon": "./assets/images/icon.png",
@@ -20,7 +20,7 @@
         "foregroundImage": "./assets/images/adaptive-icon.png",
         "backgroundColor": "#F4900C"
       },
-      "package": "com.ytrodi.PPSApp2"
+      "package": "com.ytrodi.PPSAlarmaDeRobo"
     },
     "web": {
       "favicon": "./assets/favicon.png"

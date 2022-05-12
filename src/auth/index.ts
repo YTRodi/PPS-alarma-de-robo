@@ -8,6 +8,9 @@ import {
   signInWithEmailAndPassword,
   createUserWithEmailAndPassword,
   signOut,
+  EmailAuthProvider,
+  reauthenticateWithCredential,
+  EmailAuthCredential,
 } from 'firebase/auth';
 
 interface User extends firebaseUser {}
@@ -56,6 +59,14 @@ function logout() {
   return signOut(auth);
 }
 
+function getCredential({ email, password }: AuthProps) {
+  return EmailAuthProvider.credential(email, password);
+}
+
+function reAuthenticate(currentUser: User, credential: EmailAuthCredential) {
+  return reauthenticateWithCredential(currentUser, credential);
+}
+
 export {
   AuthError,
   AuthErrorCodes,
@@ -65,4 +76,6 @@ export {
   login,
   register,
   logout,
+  getCredential,
+  reAuthenticate,
 };
