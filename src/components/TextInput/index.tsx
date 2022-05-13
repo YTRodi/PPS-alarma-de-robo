@@ -2,7 +2,7 @@ import { ComponentProps } from 'react';
 import { TextInput as TInput } from 'react-native';
 import { CSS, useTheme } from '../../../stitches.config';
 import { useToggle } from '../../hooks';
-import { Flex, Sub2 } from '../Layout';
+import { Flex, H6 } from '../Layout';
 import Button from '../Button';
 import { WrapperStyledTextInput, StyledTextInput, HelperText } from './styles';
 
@@ -17,16 +17,16 @@ interface Props extends TextInputProps {
 function TextInput({ label, error = false, helperText, css, ...rest }: Props) {
   const { colors } = useTheme();
   const [showPassword, toggleShowPassword] = useToggle(rest.secureTextEntry);
-  const color = error ? colors.red10 : colors.whiteA12;
+  const color = error ? colors.tertiary : colors.quatenary;
 
   return (
     <Flex direction='column' css={css}>
-      {label && <Sub2 css={{ color, mb: '$4' }}>{label}</Sub2>}
+      {label && <H6 css={{ color: '$secondary', mb: '$4' }}>{label}</H6>}
       <WrapperStyledTextInput align='center' error={error}>
         <StyledTextInput
           autoCapitalize='none'
           selectionColor={colors.primary}
-          placeholderTextColor={colors.blackA9}
+          placeholderTextColor={colors.primary}
           autoCorrect={false}
           {...rest}
           secureTextEntry={showPassword}

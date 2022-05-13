@@ -6,7 +6,7 @@
     "orientation": "default",
     "icon": "./assets/images/icon.png",
     "splash": {
-      "backgroundColor": "#F4900C"
+      "backgroundColor": "#ECDBBA"
     },
     "updates": {
       "fallbackToCacheTimeout": 0
@@ -18,7 +18,7 @@
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/images/adaptive-icon.png",
-        "backgroundColor": "#F4900C"
+        "backgroundColor": "#ECDBBA"
       },
       "package": "com.ytrodi.PPSAlarmaDeRobo"
     },

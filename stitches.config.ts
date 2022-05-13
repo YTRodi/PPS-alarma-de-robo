@@ -1,16 +1,3 @@
-import Constants from 'expo-constants';
-import {
-  blackA,
-  whiteA,
-  gray,
-  blue,
-  red,
-  green,
-  // grayDark,
-  // blueDark,
-  // redDark,
-  // greenDark,
-} from '@radix-ui/colors';
 import { createStitches } from 'stitches-native';
 import type * as Stitches from 'stitches-native';
 export type { VariantProps } from 'stitches-native';
@@ -19,13 +6,10 @@ export const { styled, config, useTheme, ThemeProvider, theme, css } =
   createStitches({
     theme: {
       colors: {
-        primary: Constants.manifest?.splash?.backgroundColor || '#fff',
-        ...blackA,
-        ...whiteA,
-        ...gray,
-        ...blue,
-        ...red,
-        ...green,
+        primary: '#191919',
+        secondary: '#2D4263',
+        tertiary: '#C84B31',
+        quatenary: '#ECDBBA',
       },
       fonts: {
         extraLight: 'Manrope_200ExtraLight',

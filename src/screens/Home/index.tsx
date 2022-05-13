@@ -106,7 +106,7 @@ function Home({ navigation }: Props) {
       style={{
         flex: 1,
         paddingBottom: bottom,
-        backgroundColor: colors.blackA12,
+        backgroundColor: colors.secondary,
         ...style,
       }}
     >
@@ -125,22 +125,23 @@ function Home({ navigation }: Props) {
               autoCompleteType='off'
               onChangeText={setPassword}
             />
-            <Button
-              variant='text'
-              text='Verificar contraseña'
-              onPress={handleValueChange}
-              disabled={password.length < 6}
-              loading={isValidating}
-            />
+            {password.length >= 6 && (
+              <Button
+                variant='default'
+                text='Verificar contraseña'
+                onPress={handleValueChange}
+                loading={isValidating}
+              />
+            )}
           </Flex>
         )}
 
         <Switch
           trackColor={{
-            false: colors.whiteA12,
-            true: colors.red10,
+            false: colors.quatenary,
+            true: colors.primary,
           }}
-          thumbColor={colors.gray8}
+          thumbColor={colors.quatenary}
           disabled={active}
           onValueChange={toggleActive}
           value={active}

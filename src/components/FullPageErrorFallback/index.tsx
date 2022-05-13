@@ -8,12 +8,6 @@ function FullPageErrorFallback({ error }: Props) {
   return (
     <View style={styles.container}>
       <View style={styles.wrapper}>
-        {/* <IconButton
-          icon='alert-circle-outline'
-          size={50}
-          color={Colors.red400}
-        /> */}
-        {/* TODO: add alert icon */}
         <Text>Oh oh... hubo un problema.</Text>
         <Text>Intenta recargar la app.</Text>
         <Text style={styles.errorDetail}>{error?.message}</Text>

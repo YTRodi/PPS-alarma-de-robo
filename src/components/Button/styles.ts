@@ -35,7 +35,7 @@ const Container = styled(Flex, {
         borderColor: '$primary',
       },
       default: {
-        backgroundColor: '$primary',
+        backgroundColor: '$secondary',
       },
     },
   },
@@ -44,15 +44,15 @@ const Container = styled(Flex, {
       variant: 'outlined',
       disabled: true,
       css: {
-        backgroundColor: '$whiteA12',
-        borderColor: '$gray8',
+        backgroundColor: '$quatenary',
+        borderColor: '$secondary',
       },
     },
     {
       variant: 'default',
       disabled: true,
       css: {
-        backgroundColor: '$gray8',
+        backgroundColor: 'gray',
       },
     },
   ],
@@ -79,7 +79,7 @@ const Text = styled(Body1, {
         color: '$primary',
       },
       default: {
-        color: '$whiteA12',
+        color: '$quatenary',
       },
     },
   },
@@ -88,14 +88,14 @@ const Text = styled(Body1, {
       variant: 'outlined',
       disabled: true,
       css: {
-        color: '$gray8',
+        color: '$secondary',
       },
     },
     {
       variant: 'text',
       disabled: true,
       css: {
-        color: '$gray8',
+        color: '$secondary',
       },
     },
   ],

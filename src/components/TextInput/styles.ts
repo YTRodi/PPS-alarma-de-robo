@@ -2,13 +2,13 @@ import { styled } from '../../../stitches.config';
 import { Body1, Flex } from '../Layout';
 
 const WrapperStyledTextInput = styled(Flex, {
-  backgroundColor: '$whiteA12',
+  backgroundColor: '$quatenary',
   borderWidth: 2,
   borderRadius: '$m',
 
   variants: {
     error: {
-      true: { borderColor: '$red10' },
+      true: { borderColor: '$tertiary' },
     },
   },
 
@@ -21,7 +21,7 @@ const StyledTextInput = styled('TextInput', {
   flex: 1,
   paddingVertical: '$8',
   paddingHorizontal: '$12',
-  color: '$blackA12',
+  color: '$primary',
   height: '$7xl',
 });
 

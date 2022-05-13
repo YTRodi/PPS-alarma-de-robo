@@ -23,14 +23,14 @@ function Button({
   const isTextVariant = variant === 'text';
   const isDisabled = disabled || loading;
 
-  let spinnerColor = colors.whiteA12;
+  let spinnerColor = colors.quatenary;
   if (variant !== 'default' && isDisabled) {
-    spinnerColor = colors.gray8;
+    spinnerColor = colors.secondary;
   }
 
   return (
     <StyledTouchable
-      underlayColor={!isTextVariant ? colors.gray12 : 'transparent'}
+      underlayColor={!isTextVariant ? colors.tertiary : 'transparent'}
       disabled={isDisabled}
       onPress={onPress}
       full={full}

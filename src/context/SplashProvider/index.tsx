@@ -19,7 +19,7 @@ import {
 
 import { useFadeAnimation } from '../../hooks';
 import { BASE_FADE_ANIMATION_TIME } from '../../hooks/useFadeAnimation';
-import { AppLogo, Flex, H4 } from '../../components';
+import { AppLogo, Flex, H3 } from '../../components';
 
 const sourceIcon = require('../../../assets/images/icon.png');
 
@@ -30,7 +30,6 @@ interface Props {
 }
 
 function AnimatedAppLoader(props: Props) {
-  const [isSplashReady, setIsSplashReady] = useState(false);
   const [fontsLoaded] = useFonts({
     Manrope_200ExtraLight,
     Manrope_300Light,
@@ -47,11 +46,10 @@ function AnimatedAppLoader(props: Props) {
   );
 
   const onFinish = useCallback(async () => {
-    setIsSplashReady(true);
     await SplashScreen.hideAsync();
   }, []);
 
-  if (!isSplashReady && !fontsLoaded) {
+  if (!fontsLoaded) {
     return (
       <AppLoading
         autoHideSplash={false}
@@ -104,7 +102,7 @@ function AnimatedSplashScreen({ children }: Props) {
           }}
         >
           <Animated.View style={fadeAnimation.style}>
-            <H4>Rodi Yago</H4>
+            <H3>Alarma de robo</H3>
           </Animated.View>
           <AppLogo
             animated
@@ -113,7 +111,10 @@ function AnimatedSplashScreen({ children }: Props) {
             styles={fadeAnimation.style}
           />
           <Animated.View style={fadeAnimation.style}>
-            <H4>División 4B</H4>
+            <Flex direction='column' align='center'>
+              <H3>Rodi Yago</H3>
+              <H3>División 4B</H3>
+            </Flex>
           </Animated.View>
         </Flex>
       )}

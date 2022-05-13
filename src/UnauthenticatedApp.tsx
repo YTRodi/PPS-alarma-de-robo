@@ -12,7 +12,6 @@ import {
   Button,
   Flex,
   HardcodedPersons,
-  Sub1,
   TextInput,
 } from './components';
 
@@ -63,24 +62,28 @@ function UnauthenticatedApp() {
     show();
   }, []);
 
-  const commonCss = { color: '$whiteA12' };
-
   return (
     <Animated.View style={{ flex: 1, ...style }}>
       <StatusBar animated style='light' />
-      <Flex direction='column' css={{ flex: 1, backgroundColor: '$blackA12' }}>
+      <Flex
+        direction='column'
+        justify='center'
+        css={{ flex: 1, backgroundColor: '$quatenary' }}
+      >
         <Flex direction='column' css={{ flex: 1, mh: '$16' }}>
           <Flex direction='column' align='center' css={{ mt: 52 }}>
-            <Sub1 css={{ ...commonCss }}>Bienvenido a</Sub1>
-            <Sub1 css={{ mb: '$16', ...commonCss }}>
-              Relevamiento Visual App
-            </Sub1>
             <AppLogo />
           </Flex>
 
-          <Flex direction='column' css={{ mt: '$16' }}>
-            <Sub1 css={{ ...commonCss, mb: '$8' }}>Credenciales</Sub1>
+          <HardcodedPersons
+            onSelectPerson={({ email, password }) =>
+              setValues({ email, password })
+            }
+          />
+
+          <Flex direction='column' css={{ mv: '$32' }}>
             <TextInput
+              label='Correo electrónico'
               keyboardType='email-address'
               placeholder='Correo electrónico'
               returnKeyType='next'
@@ -92,7 +95,9 @@ function UnauthenticatedApp() {
               error={touched.email && Boolean(formErrors.email)}
               helperText={formErrors.email}
             />
+            <Flex css={{ mv: '$4' }} />
             <TextInput
+              label='Contraseña'
               secureTextEntry
               placeholder='Contraseña'
               autoCompleteType='off'
@@ -113,12 +118,6 @@ function UnauthenticatedApp() {
               onPress={() => handleSubmit()}
             />
           </Flex>
-
-          <HardcodedPersons
-            onSelectPerson={({ email, password }) =>
-              setValues({ email, password })
-            }
-          />
         </Flex>
       </Flex>
     </Animated.View>
@@ -126,3 +125,13 @@ function UnauthenticatedApp() {
 }
 
 export default UnauthenticatedApp;
+
+// TODO: cambiar los colores, ver el video que le pase a gaston por IG para ver la pagina donde mostraban paletas de colores
+// TODO: cambiar los colores, ver el video que le pase a gaston por IG para ver la pagina donde mostraban paletas de colores
+// TODO: cambiar los colores, ver el video que le pase a gaston por IG para ver la pagina donde mostraban paletas de colores
+// TODO: cambiar los colores, ver el video que le pase a gaston por IG para ver la pagina donde mostraban paletas de colores
+// TODO: cambiar los colores, ver el video que le pase a gaston por IG para ver la pagina donde mostraban paletas de colores
+// TODO: cambiar los colores, ver el video que le pase a gaston por IG para ver la pagina donde mostraban paletas de colores
+// TODO: cambiar los colores, ver el video que le pase a gaston por IG para ver la pagina donde mostraban paletas de colores
+// TODO: cambiar los colores, ver el video que le pase a gaston por IG para ver la pagina donde mostraban paletas de colores
+// TODO: cambiar los colores, ver el video que le pase a gaston por IG para ver la pagina donde mostraban paletas de colores
