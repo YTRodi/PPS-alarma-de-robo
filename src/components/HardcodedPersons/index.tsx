@@ -3,45 +3,56 @@ import Button from '../Button';
 import { Flex, H5 } from '../Layout';
 
 interface Person {
+  // id: number;
   name: string;
   email: string;
   password: string;
+  // role: string;
+  // gender: string;
 }
 
 interface Props {
   onSelectPerson: (person: Person) => void;
 }
 
-const genericPassword = 'Password1';
-
 const HardcodedPersons = ({ onSelectPerson }: Props) => {
   const persons = useMemo<Person[]>(
     () => [
       {
-        name: 'Scott',
-        email: 'scottR@yopmail.com',
-        password: genericPassword,
+        name: 'Admin',
+        email: 'admin@admin.com',
+        password: '111111',
       },
       {
-        name: 'Maggie',
-        email: 'maggieR@yopmail.com',
-        password: genericPassword,
+        name: 'Invitado',
+        email: 'invitado@invitado.com',
+        password: '222222',
       },
       {
-        name: 'Luna',
-        email: 'lunaR@yopmail.com',
-        password: genericPassword,
+        name: 'Usuario',
+        email: 'usuario@usuario.com',
+        password: '333333',
+      },
+      {
+        name: 'Anonimo',
+        email: 'anonimo@anonimo.com',
+        password: '444444',
+      },
+      {
+        name: 'Tester',
+        email: 'tester@tester.com',
+        password: '555555',
       },
     ],
     []
   );
 
   return (
-    <Flex direction='column' align='center' css={{ mt: '$16' }}>
+    <Flex direction='column' css={{ mt: '$16' }}>
       <H5 css={{ color: '$tertiary' }}>Iniciar sesión como</H5>
       <Flex css={{ pt: '$16' }}>
         {persons.map((person, index) => (
-          <Flex key={index} css={{ flex: 1, mh: index === 1 ? '$16' : '$0' }}>
+          <Flex key={index} css={{ flex: 1 }}>
             <Button
               full
               text={person.name}
